@@ -4,44 +4,60 @@
 
 /* BODY */
 body{
+    width: 100%;
+    height: auto;
     position: absolute;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: rgb(246,246,246);
     background: linear-gradient(180deg, rgb(216, 216, 216) 0%, rgb(124, 124, 124) 100%);
     background-size: cover;
     background-position: center;
-    min-height: 1000px;
+    /* min-height: 1000px; */
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    top: 0%;
 }
 
 /* NAVIGATION BAR */
 .nav{
+    width: 50%;
     position: absolute;
-    left: 40%;
+    left: 25%;
+    right: auto;
     top: 1%;
+    text-align: center;
+    z-index: 1;
+}
+
+.cont{
+    align-self: center;
 }
 
 .site-name{
     font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    display: inline-block;
+    font-size: 300%;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 5px #979797;
 }
 
 .logo{
 position: absolute;
+display: inline-block;
+
 filter: invert(100%) drop-shadow(1px 1px 5px #979797);
-height: 80px;
+height: 100%;
 background: transparent;
 }
 
 /* BACKGROUND */
-/* .background{
+.background{
     position: absolute;
     bottom: 0%;
-    right: 0%;
+    left: 0%;
     z-index: 0;
-} */
-
+}
 /* MUSIC BOX */
 /*.music-label{
     width: 300px;
@@ -98,16 +114,17 @@ background: transparent;
 
 .quote{
     font-weight: 500;
-    font-size: 30px;   
+    font-size: 200%; 
 }
 
 .author{
     font-weight: 300;
-    font-size: 20px;
+    font-size: 150%;
 }
 
 .quote-box:hover{
-    background-color: rgba(190, 190, 190, 0.2);
+    background-color: rgba(85, 85, 85, 0.5);
+    transition: 1.5s;
 }
 
 .quote-box:after {
@@ -118,18 +135,19 @@ background: transparent;
   height: 1em;
   width: 100%;
   border-bottom: 1px solid;
-  margin-top: 10px;
+  margin-top: 18px;
   opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transition: opacity 0.7s, -webkit-transform 0.7s;
+	transition: opacity 0.7s, transform 0.7s;
 	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
+    transform: scale(0,1);
 }
 
 .quote-box:hover:after {
-  opacity: 1;
+    transition: 1,5s;
+    opacity: 1;
 	-webkit-transform: scale(1);
-	transform: scale(1);
+    transform: scale(1);
 }
 
 .noselect {

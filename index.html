@@ -12,15 +12,17 @@
     </script>
   </head>
 
-  <body ondragstart="return false;" ondrop="return false;">
+  <body ondragstart="return false;" ondrop="return false;" id="body">
     <!-- NAVIGATION BAR -->
     <span class="nav noselect">
+    <a class=cont>
       <span class="site-name">amBient</span>
       <img class="logo" src="img\logo.png" alt="logo">
+    </a>
     </span>
 
     <!-- BACKGROUND -->
-    <span class="background noselect"><img src="https://source.unsplash.com/1920x1080/?wallpaper" alt="background"></span>
+    <span class="background noselect" id="background"><img src="https://source.unsplash.com/1920x1080/?wallpaper" alt="background"></span>
 
     <!-- MUSIC BOX
     <div>
@@ -35,20 +37,20 @@
     <div class="player" id="player"></div>
 
     <!-- QUOTE -->
-    <div class="quote-box noselect">
+    <div class="quote-box noselect" id="quote">
       <span class="quote"></span><br>
       <span class="author"></span>
     </div>
 
     <!-- LEFT-MENU -->
-    <div class="fixed-action-btn">
+    <div class="fixed-action-btn" id="buttons">
       <a href="#" class="hoverable btn-floating waves-effect grey btn-large"><i class="large material-icons">expand_less</i></a>
       <ul>
-        <li><a href="" class="hoverable btn-floating waves-effect blue btn-large"><i class="large material-icons">refresh</i></a></li>
-        <li><a href="https://uk.linkedin.com/in/angelonastro" target="_blank" class="hoverable btn-floating waves-effect green btn-large"><i class="large material-icons">face</i></a></li>
-        <li><a href="#!" class="hoverable btn-floating waves-effect yellow btn-large"><i class="large material-icons" onclick="copyLink()">share</i></a></li>
-        <li><a href="#" class="hoverable btn-floating waves-effect orange btn-large"><i class="large material-icons" onclick="getQuote()">all_inclusive</i></a></li>
-        <li><button class="playbtn hoverable btn-floating waves-effect red btn-large" onclick="myfunction()"><i class="large material-icons">play_arrow</i></button></li>
+        <li><a href="" class="hoverable btn-floating waves-effect blue btn-large tooltipped" data-position="left" data-tooltip="Reload"><i class="large material-icons">refresh</i></a></li>
+        <li><a href="https://uk.linkedin.com/in/angelonastro" target="_blank" class="hoverable btn-floating waves-effect green btn-large tooltipped" data-position="left" data-tooltip="See my profile"><i class="large material-icons">face</i></a></li>
+        <li><a href="#!" class="hoverable btn-floating waves-effect yellow btn-large tooltipped" data-position="left" data-tooltip="Share"><i class="large material-icons" onclick="copyLink(),Materialize.toast('Link copied', 2500, 'rounded grey')">share</i></a></li>
+        <li><a href="#" class="hoverable btn-floating waves-effect orange btn-large tooltipped" data-position="left" data-tooltip="Change quote"><i class="large material-icons" onclick="getQuote()">all_inclusive</i></a></li>
+        <li><button class="playbtn hoverable btn-floating waves-effect red btn-large tooltipped" data-position="left" data-tooltip="Play music" onclick="myfunction()"><i class="large material-icons">play_arrow</i></button></li>
       </ul>
     </div>
     
@@ -57,9 +59,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
     <script>
-    $(".button-collapse").sideNav();
     $(document).ready(function(){
       getQuote();
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("nav").style.display = "block";
+      document.getElementById("background").style.display = "block";
+      document.getElementById("player").style.display = "block";
+      document.getElementById("quote").style.display = "block";
+      document.getElementById("buttons").style.display = "block";
       // player.playVideo();
     });
 
