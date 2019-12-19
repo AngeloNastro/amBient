@@ -53,6 +53,8 @@ background: transparent;
 
 /* BACKGROUND */
 .background{
+    background-size: cover;
+    background-position: center;
     position: absolute;
     bottom: 0%;
     left: 0%;
@@ -69,24 +71,18 @@ background: transparent;
     border-radius: 50px; 
     background: linear-gradient(180deg, rgb(228, 228, 228) 0%, rgb(190, 190, 190) 100%);
 }
-
 .song-title{
     font-size: 20px;
     position: absolute;
     top: 20%;
     left: 45%;
-
-
 }
-
 .song-artist{
     font-size: 20px;
     position: absolute;
     top: 45%;
     left: 45%;
-
 }
-
 .song-album-cover{
     width: 90px;
     position: absolute;
@@ -97,7 +93,8 @@ background: transparent;
 /* PLAYER */
 .player{
     position: absolute;
-    bottom: 20%;
+    bottom: -20%;
+    left: -20%;
     opacity: 0%;
 }
 

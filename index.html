@@ -14,7 +14,7 @@
 
   <body ondragstart="return false;" ondrop="return false;" id="body">
     <!-- NAVIGATION BAR -->
-    <span class="nav noselect">
+    <span id="nav" class="nav noselect">
     <a class=cont>
       <span class="site-name">amBient</span>
       <img class="logo" src="img\logo.png" alt="logo">
@@ -61,7 +61,6 @@
     <script>
     $(document).ready(function(){
       getQuote();
-      document.getElementById("preloader").style.display = "none";
       document.getElementById("nav").style.display = "block";
       document.getElementById("background").style.display = "block";
       document.getElementById("player").style.display = "block";
@@ -69,7 +68,6 @@
       document.getElementById("buttons").style.display = "block";
       // player.playVideo();
     });
-
     function myfunction(){
     if (i==false){
       i=true;
@@ -83,7 +81,6 @@
     }
     localStorage.setItem('playbtn', i);
     }
-
     function copyLink(){
       navigator.clipboard.writeText(LINK).then(function() {
       /* clipboard successfully set */
@@ -91,7 +88,6 @@
       /* clipboard write failed */
       });
     }
-
     function getQuote(){
     var url= "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
     $.getJSON(url, function(data){
@@ -99,24 +95,21 @@
       $(".author").html("- "+data.quoteAuthor+" -");
       });
     }
-
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
     var player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
-        height: '100',
-        width: '100',
+        height: '0',
+        width: '0',
         videoId: 'bebuiaSKtU4',
         events: {
           'onReady': onPlayerReady,
         }
       });
     }
-
     function onPlayerReady(event) {
       event.target.playVideo();
     }
@@ -126,4 +119,4 @@
     }
     </script>
   </body>
-</html>      
+</html> 
