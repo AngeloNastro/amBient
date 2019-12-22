@@ -110,11 +110,13 @@ background: transparent;
 }
 
 .quote{
+	z-index: 1;
     font-weight: 500;
     font-size: 200%; 
 }
 
 .author{
+	z-index: 1;
     font-weight: 300;
     font-size: 150%;
 }
