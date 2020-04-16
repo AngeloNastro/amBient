@@ -21,10 +21,8 @@ body{
 
 /* NAVIGATION BAR */
 .nav{
-    width: 50%;
+    width: 100%;
     position: absolute;
-    left: 25%;
-    right: auto;
     top: 1%;
     text-align: center;
     z-index: 1;
