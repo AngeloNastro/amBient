@@ -46,10 +46,14 @@ display: inline-block;
 
 filter: invert(100%) drop-shadow(1px 1px 5px #979797);
 height: 100%;
+width: auto;
 background: transparent;
 }
 
 /* BACKGROUND */
+.img{
+	width: 100vw;
+}
 .background{
     background-size: cover;
     background-position: center;
